@@ -3,16 +3,18 @@
 ========================= */
 
 :root {
-  --bg: #111111;
-  --bg-soft: #181818;
-  --bg-light: #f4f1eb;
+  --bg: #090909;
+  --bg-soft: #141412;
+  --bg-light: #d8d4c8;
 
-  --text: #f5f5f5;
-  --text-dark: #151515;
-  --muted: #a8a8a8;
+  --text: #eeeae0;
+  --text-dark: #11110f;
+  --muted: #a5a196;
 
-  --accent: #FFD13E;
-  --border: rgba(255, 255, 255, 0.12);
+  --accent: #9c9888;
+  --accent-light: #c7c2b2;
+  --accent-dark: #6f6c61;
+  --border: rgba(199, 194, 178, 0.16);
 
   --container: 1200px;
 }
@@ -72,7 +74,7 @@ a {
 
 .header-banner {
   width: 100%;
-  background: #111111;
+  background: var(--bg);
   overflow: hidden;
 }
 
@@ -84,6 +86,7 @@ a {
   object-position: center;
 
   display: block;
+  filter: grayscale(1) contrast(1.08) brightness(0.72);
 }
 
 
@@ -92,7 +95,7 @@ a {
 ========================= */
 
 .nav {
-  min-height: 78px;
+  min-height: 88px;
 
   display: flex;
   align-items: center;
@@ -107,7 +110,7 @@ a {
 }
 
 .logo img {
-  height: 52px;
+  height: 64px;
   width: auto;
 
   display: block;
@@ -147,7 +150,7 @@ a {
   padding: 0 26px;
 
   background: var(--accent);
-  color: #111111;
+  color: var(--text-dark);
 
   font-size: 0.9rem;
   font-weight: 800;
@@ -292,7 +295,7 @@ a {
   width: 220px;
   height: 220px;
 
-  border: 1px solid rgba(255, 209, 62, 0.22);
+  border: 1px solid rgba(156, 152, 136, 0.28);
 
   transform: rotate(45deg);
 
@@ -321,7 +324,7 @@ a {
 
 .service-strip {
   background: var(--accent);
-  color: #111111;
+  color: var(--text-dark);
 
   overflow: hidden;
 
@@ -401,7 +404,7 @@ a {
 }
 
 .service:hover {
-  background: #191919;
+  background: #1a1916;
 }
 
 .service-number {
@@ -495,7 +498,7 @@ a {
 }
 
 .contact-section .eyebrow {
-  color: #9c7a00;
+  color: var(--accent-dark);
 }
 
 .contact-grid {
@@ -513,11 +516,11 @@ a {
 
   margin-top: 30px;
 
-  color: #555555;
+  color: #4f4d46;
 }
 
 .contact-card {
-  background: #ffffff;
+  background: #e7e3d9;
 
   padding: 45px;
 
@@ -534,11 +537,31 @@ a {
 .contact-card p {
   margin-bottom: 22px;
 
-  color: #555555;
+  color: #4f4d46;
 }
 
 .contact-card .button {
   margin-top: 12px;
+}
+
+
+.contact-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--text-dark);
+  border-color: var(--text-dark);
+}
+
+.button-outline:hover {
+  background: var(--text-dark);
+  color: var(--accent-light);
+  border-color: var(--text-dark);
 }
 
 
@@ -647,7 +670,7 @@ a {
   }
 
   .logo img {
-    height: 42px;
+    height: 50px;
   }
 
   .header .button-small {
